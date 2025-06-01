@@ -1,0 +1,5 @@
+Modules in NodeJs:
+// 1. Core Modules
+//    - fs: File System module for file operations
+//    - http: Module to create HTTP servers and clients
+

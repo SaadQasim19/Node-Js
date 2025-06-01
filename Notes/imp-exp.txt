@@ -1,0 +1,22 @@
+Import-Export Notes:
+
+file: Math.js
+
+function add(a,b){return a+b;} 
+module.exports = { add };
+
+file: index.js
+const math = require('./Math.js'); // Importing the Math module
+console.log(math.add(2, 3));
+
+
+//Es-6 version
+add {"type":"module"}
+
+// file: Math.js
+export function add(a, b) {
+    return a + b;
+}
+// file: index.js
+import { add } from './Math.js'; // Importing the Math module
+console.log(add(2, 3));

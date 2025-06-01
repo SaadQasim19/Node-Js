@@ -1,0 +1,10 @@
+NodeJs:
+npm init -y ( y= yes to all , those question which are asked during package.json installation without -y)
+
+ExpressJs:
+npm i express
+
+
+UnderScore:
+npm i underscore
+const _ = require('underscore'); import
