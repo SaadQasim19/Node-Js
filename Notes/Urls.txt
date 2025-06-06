@@ -1,0 +1,13 @@
+Uniform Resource Locators .
+
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html
+
+http = Hypertext Transfer Protocol
+https = Hypertext Transfer Protocol Secure
+
+https:// = Protocol
+
+www.saad.com = Domain Name
+
+/ = Path ( after the domain name )
+/ssd/ = nested path
