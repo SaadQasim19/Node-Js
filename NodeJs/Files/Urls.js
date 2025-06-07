@@ -9,11 +9,15 @@ const server = http.createServer((req, res) => {
     res.end("Welcome to the About Page");
   }else if(req.url ==="/user"){
     res.setHeader("Content-Type" , "application/json");
-    const user = {
-        name: "John Doe",
-        age: 30,
-        email: "john.doe@example.com"
-    };
+    const user = [{
+        name: "Saad Qasim",
+        age: 20,
+        email: "saad@example.com"
+    },{
+      name: "Kashmala Malik",
+      age:19,
+      email:"mala@example.com"
+    }];
     res.end(JSON.stringify(user));
   } else {
     res.statusCode = 404;

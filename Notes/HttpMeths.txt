@@ -1,0 +1,12 @@
+HTTP Methods client (browser/frontend) aur server ke darmiyan communication ka tariqa batate hain — kis type ka kaam karna hai.
+
+-------------------------------------------------------------------------
+| Method   | Purpose                   | Easy Explanation               |
+| -------- | ------------------------- | ------------------------------ |
+| `GET`    | Data lena (read)          | "Mujhe data dikhao"            | /products
+| `POST`   | Naya data bhejna          | "Yeh naya record save karo"    | /products
+| `PUT`    | Purana data replace karna | "Isay poora naya version do"   | /products/:id
+| `PATCH`  | Kuch part update karna    | "Is data ka thoda hissa badlo" | /products/:id
+| `DELETE` | Data delete karna         | "Isay hata do"                 | /products/:id
+-------------------------------------------------------------------------
+
