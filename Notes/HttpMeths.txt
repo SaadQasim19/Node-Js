@@ -10,3 +10,4 @@ HTTP Methods client (browser/frontend) aur server ke darmiyan communication ka t
 | `DELETE` | Data delete karna         | "Isay hata do"                 | /products/:id
 -------------------------------------------------------------------------
 
+POST : client to server data bhejna... 

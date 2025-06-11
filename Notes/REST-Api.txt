@@ -1,0 +1,27 @@
+what is rest api ?
+A REST API (Representational State Transfer Application Programming Interface).
+
+is a set of rules and conventions for building and interacting with web services. It allows different software applications to communicate over the internet using standard HTTP methods such as GET, POST, PUT, DELETE, etc. 
+
+REST APIs are designed to be stateless, meaning each request from a client contains all the information needed to process that request, and they typically return data in formats like JSON or XML.
+
+REST API vs SOAP API:
+
+1. Protocol:
+-- REST API --: Uses standard HTTP methods (GET, POST, PUT, DELETE) and is based on the principles of REST architecture. It is not tied to any specific protocol and can use JSON, XML, or other formats for data exchange.
+
+-- SOAP API --: Uses the Simple Object Access Protocol (SOAP) which is a protocol with strict standards. It relies on XML for message format and typically uses HTTP or SMTP for message transmission.
+
+2. Statefulness:
+-- REST API --:
+Stateless, meaning each request from a client contains all the information needed to process that request. The server does not store any client context between requests.
+
+-- SOAP API --:
+Can be stateful or stateless, but it often maintains a session state for complex transactions.
+3. Data Format:
+
+-- REST API --:
+Primarily uses JSON for data exchange, but can also support XML, HTML, or plain text. JSON is lightweight and easier to work with in web applications.
+
+-- SOAP API --:
+Uses XML exclusively for message format, which can be more verbose and complex compared to JSON.
