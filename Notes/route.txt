@@ -1,0 +1,28 @@
+import express from "express";
+const router = express.Router();
+
+// GET - Read
+router.get("/", (req, res) => {
+  res.send("All users here");
+});
+
+// POST - Create
+router.post("/", (req, res) => {
+  const data = req.body;
+  res.json({ message: "User created", user: data });
+});
+
+// PUT - Update
+router.put("/:id", (req, res) => {
+  const { id } = req.params;
+  const updated = req.body;
+  res.json({ message: `User ${id} updated`, updated });
+});
+
+// DELETE - Remove
+router.delete("/:id", (req, res) => {
+  const { id } = req.params;
+  res.json({ message: `User ${id} deleted` });
+});
+
+export default router;
