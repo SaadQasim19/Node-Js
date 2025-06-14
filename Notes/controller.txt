@@ -1,0 +1,30 @@
+SHORTCUT FOR USER CONTROLLER FUNCTIONS.
+
+Better for quick testing ....
+
+import User from "../models/User.js";
+
+//! GET All Users
+export const getUsers = async (req, res) => {
+  const users = await User.find();
+  res.status(200).json(users);
+};
+
+//! POST Create User
+export const createUser = async (req, res) => {
+  const user = new User(req.body);
+  await user.save();
+  res.status(201).json({ message: "User Created", user });
+};
+
+//! PUT Update User
+export const updateUser = async (req, res) => {
+  const updated = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.json({ message: "User Updated", updated });
+};
+
+//! DELETE User
+export const deleteUser = async (req, res) => {
+  await User.findByIdAndDelete(req.params.id);
+  res.json({ message: "User Deleted" });
+};

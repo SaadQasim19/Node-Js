@@ -1,52 +1,53 @@
-
 import user_model from "../model/user_model.js";
-import mongoose from "mongoose";
 
-//& GET
-export const getUser = async (req, res) => {
-try {
-    const data = await user_model.find({});
-    // res.status(200).json(data);
-    res.status(200).json({
-        success: true,
-        message: "Users retrieved successfully",
-        data: data
-    });
-} catch (error) {
-    
-    res.status(500).json({
-        success: false,
-        message: "An error occurred while retrieving users",
-        error: error.message
-    });
+//* GET -- Get all users
+
+export const getUsers = async (req, res)=>{
+    try {
+        
+        const users = await user_model.find({});
+        res.status(200).json({
+            success:true,
+            message: "Users retrieved successfully",
+            users:users
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "An error occurred while retrieving users",
+            error: error.message
+        });
+    }
 }
-}
+
+//* POST -- Create a new user
+
 
 export const createUser = async (req, res) => {
-const userData = req.body;
-if (!userData.name || !userData.email || !userData.password) {
-    return res.status(400).json({ message: "All fields are required" });
-}
-try {
-    const newUser = new user_model(userData);
-    await newUser.save();
-    res.status(201).json({
-        success: true,
-        message: "User created successfully",
-        // user: {
-        //     id: newUser._id,
-        //     name: newUser.name,
-        //     email: newUser.email
-        // },
-        user:newUser,
-    });
-} catch (error) {
-    res.status(500).json({
+    const userUser = req.body;
+  
+    if (!userUser.name || !userUser.price || !userUser.image) {
+      return res.status(400).json({
         success: false,
-        message: "An error occurred while creating the user",
-        error: error.message
-    });
-}}
+        message: "Required Fields are missing.",
+      });
+    }
+  
+    const newUser = new user_model(userUser);
+    try {
+      await newUser.save();
+      res.status(201).json({
+        success: true,
+        message: "User Created Successfully",
+        User: newUser,
+      });
+    } catch (error) {
+      console.error("Error in creating product", error);
+      res.status(400).json({ success: false, message: "Internal Server Error" });
+    }
+  };
+
 
 //* PUT -- Update user by ID
 export const updateUser = async (req, res) => {

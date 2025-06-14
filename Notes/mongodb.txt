@@ -1,0 +1,42 @@
+Create a Project:
+Node-Backend -- next
+
+Add Members and Set Permissions:
+show project owner(you) -- Create Project 
+
+Overview:
+Create a cluster -- Create
+
+Select Free Tier
+i setted up name for this Cluster as Node-Cluster -- Create Deployment
+
+PopUp: Cluster is being created.
+
+Connect to Node-Cluster
+
+copy password: a8YH7o0l6wkLcvVJ -- Create a Database User
+
+Connect to your application:
+Drivers and copy password : mongodb+srv://msaadqasim7665:a8YH7o0l6wkLcvVJ@node-cluster.sqjuijv.mongodb.net/?retryWrites=true&w=majority&appName=Node-Cluster  -- Done 
+
+Overview:
+get connection string -- if before not copied connection string , as i did before ( Drivers ...)
+
+Now go to .env :
+MONGO_URI=mongodb+srv://msaadqasim7665:a8YH7o0l6wkLcvVJ@node-cluster.sqjuijv.mongodb.net/?retryWrites=true&w=majority&appName=Node-Cluster
+
+sometimes you need to add password to the connection string . there is password 
+
+we will add users before ? in  connection string , which will show the database name. 
+
+Now under Network Access:
+
+here we will see our IP address ... 
+
+You will see Add IP Address click on it , and click on Allow Access from Anywhere -- confirm 
+
+it will add a new IP address.
+
+now go to Clusters: -- Browse Collections . thats it .
+
+26:07
